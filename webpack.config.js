@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: argv.mode === "production" ? "/" : "http://localhost:3000/",
   },
 
   resolve: {
@@ -65,8 +65,8 @@ module.exports = (_, argv) => ({
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        colorPicker: "mf_color_picker@http://localhost:3001/remoteEntry.js",
-        colorList: "mf_color_list@http://localhost:3002/remoteEntry.js",
+        colorPicker: "mf_color_picker@https://mfcolor-picker.netlify.app/remoteEntry.js",
+        colorList: "mf_color_list@https://mfcolor-list.netlify.app/remoteEntry.js",
       },
       exposes: {},
       shared: {

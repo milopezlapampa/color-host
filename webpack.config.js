@@ -9,6 +9,8 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
+    filename: "[name].[contenthash].js",
+    chunkFilename: "[id].[contenthash].js",
     publicPath: "https://color-host.netlify.app/",
   },
 

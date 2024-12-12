@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: argv.mode === "production" ? "/" : "https://color-host.netlify.app//",
+    publicPath: "https://color-host.netlify.app/",
   },
 
   resolve: {
